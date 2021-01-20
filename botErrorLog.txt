@@ -1,0 +1,199 @@
+2021-01-14T16:07:13.277-06:00 [APP/PROC/WEB/1] [OUT] Setting current user to user: SENSITIVE
+
+2021-01-14T16:07:13.308-06:00 [APP/PROC/WEB/1] [OUT] DialogBot: Dialog context: DialogContext {
+2021-01-14T16:07:13.308-06:00 [APP/PROC/WEB/1] [OUT] services: TurnContextStateCollection [Map] {},
+2021-01-14T16:07:13.308-06:00 [APP/PROC/WEB/1] [OUT] dialogs:
+2021-01-14T16:07:13.308-06:00 [APP/PROC/WEB/1] [OUT] DialogSet {
+2021-01-14T16:07:13.308-06:00 [APP/PROC/WEB/1] [OUT] dialogs: { MainDialog: [MainDialog] },
+2021-01-14T16:07:13.308-06:00 [APP/PROC/WEB/1] [OUT] dialogState:
+2021-01-14T16:07:13.308-06:00 [APP/PROC/WEB/1] [OUT] BotStatePropertyAccessor { state: [ConversationState], name: 'ginaCore' },
+2021-01-14T16:07:13.308-06:00 [APP/PROC/WEB/1] [OUT] _version: undefined },
+2021-01-14T16:07:13.308-06:00 [APP/PROC/WEB/1] [OUT] context:
+2021-01-14T16:07:13.308-06:00 [APP/PROC/WEB/1] [OUT] TurnContext {
+2021-01-14T16:07:13.308-06:00 [APP/PROC/WEB/1] [OUT] _respondedRef: { responded: false },
+2021-01-14T16:07:13.308-06:00 [APP/PROC/WEB/1] [OUT] _turnState:
+2021-01-14T16:07:13.308-06:00 [APP/PROC/WEB/1] [OUT] TurnContextStateCollection [Map] {
+2021-01-14T16:07:13.308-06:00 [APP/PROC/WEB/1] [OUT] Symbol(BotIdentity) => [ClaimsIdentity],
+2021-01-14T16:07:13.308-06:00 [APP/PROC/WEB/1] [OUT] Symbol(ConnectorClient) => [ConnectorClient],
+2021-01-14T16:07:13.308-06:00 [APP/PROC/WEB/1] [OUT] Symbol(OAuthScope) => 'https://api.botframework.com',
+2021-01-14T16:07:13.308-06:00 [APP/PROC/WEB/1] [OUT] 'botCallbackHandler' => [AsyncFunction],
+2021-01-14T16:07:13.308-06:00 [APP/PROC/WEB/1] [OUT] 'turn.locale' => 'en-US',
+2021-01-14T16:07:13.308-06:00 [APP/PROC/WEB/1] [OUT] Symbol(state) => [Object],
+2021-01-14T16:07:13.308-06:00 [APP/PROC/WEB/1] [OUT] 'currentUser' => [Object],
+2021-01-14T16:07:13.308-06:00 [APP/PROC/WEB/1] [OUT] Symbol(state) => [Object],
+2021-01-14T16:07:13.308-06:00 [APP/PROC/WEB/1] [OUT] 'DialogStateManagerConfiguration' => [Object],
+2021-01-14T16:07:13.308-06:00 [APP/PROC/WEB/1] [OUT] Symbol(turn) => [Object] },
+2021-01-14T16:07:13.308-06:00 [APP/PROC/WEB/1] [OUT] _onSendActivities: [ [Function], [Function], [AsyncFunction], [AsyncFunction] ],
+2021-01-14T16:07:13.308-06:00 [APP/PROC/WEB/1] [OUT] _onUpdateActivity: [ [Function], [Function] ],
+2021-01-14T16:07:13.308-06:00 [APP/PROC/WEB/1] [OUT] _onDeleteActivity: [ [Function], [Function] ],
+2021-01-14T16:07:13.308-06:00 [APP/PROC/WEB/1] [OUT] _turnLocale: 'turn.locale',
+2021-01-14T16:07:13.308-06:00 [APP/PROC/WEB/1] [OUT] bufferedReplyActivities: [],
+2021-01-14T16:07:13.308-06:00 [APP/PROC/WEB/1] [OUT] _adapter:
+2021-01-14T16:07:13.308-06:00 [APP/PROC/WEB/1] [OUT] DefaultAdapter {
+2021-01-14T16:07:13.308-06:00 [APP/PROC/WEB/1] [OUT] middleware: [MiddlewareSet],
+2021-01-14T16:07:13.308-06:00 [APP/PROC/WEB/1] [OUT] BotIdentityKey: Symbol(BotIdentity),
+2021-01-14T16:07:13.308-06:00 [APP/PROC/WEB/1] [OUT] OAuthScopeKey: Symbol(OAuthScope),
+2021-01-14T16:07:13.308-06:00 [APP/PROC/WEB/1] [OUT] ConnectorClientKey: Symbol(ConnectorClient),
+2021-01-14T16:07:13.308-06:00 [APP/PROC/WEB/1] [OUT] TokenApiClientCredentialsKey: Symbol(TokenApiClientCredentials),
+2021-01-14T16:07:13.308-06:00 [APP/PROC/WEB/1] [OUT] settings: [Object],
+2021-01-14T16:07:13.308-06:00 [APP/PROC/WEB/1] [OUT] credentials: [MicrosoftAppCredentials],
+2021-01-14T16:07:13.308-06:00 [APP/PROC/WEB/1] [OUT] credentialsProvider: [SimpleCredentialProvider],
+2021-01-14T16:07:13.308-06:00 [APP/PROC/WEB/1] [OUT] isEmulatingOAuthCards: false,
+2021-01-14T16:07:13.308-06:00 [APP/PROC/WEB/1] [OUT] authConfiguration: [AuthenticationConfiguration],
+2021-01-14T16:07:13.308-06:00 [APP/PROC/WEB/1] [OUT] skills: [],
+2021-01-14T16:07:13.308-06:00 [APP/PROC/WEB/1] [OUT] turnError: [AsyncFunction],
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] conversationState: [ConversationState],
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] userState: [UserState] },
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] _activity:
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] { text: 'solution change ep',
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] textFormat: 'plain',
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] type: 'message',
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] timestamp: 2021-01-14T22:07:12.332Z,
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] localTimestamp: 2021-01-14T22:07:12.332Z,
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] id: '1610662032312',
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] channelId: 'msteams',
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] serviceUrl: 'https://smba.trafficmanager.net/amer/',
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] from: [Object],
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] conversation: [Object],
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] recipient: [Object],
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] entities: [Array],
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] channelData: [Object],
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] locale: 'en-US',
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] localTimezone: 'America/Chicago',
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] rawTimestamp: '2021-01-14T22:07:12.3321635Z',
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] rawLocalTimestamp: '2021-01-14T16:07:12.3321635-06:00',
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] callerId: 'urn:botframework:azure' } },
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] stack:
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] [ { id: 'MainDialog', state: [Object], version: '1449152352' } ],
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] state:
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] DialogStateManager {
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] dialogContext: [Circular],
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] configuration: { pathResolvers: [Array], memoryScopes: [Array] } } }
+
+
+
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] DialogBot: Turn context after setting dialog context: TurnContext {
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] _respondedRef: { responded: false },
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] _turnState:
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] TurnContextStateCollection [Map] {
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] Symbol(BotIdentity) => ClaimsIdentity { claims: [Array], authenticationType: true },
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] Symbol(ConnectorClient) => ConnectorClient {
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] _withCredentials: false,
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] _httpClient: [AxiosHttpClient],
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] _requestPolicyOptions: [RequestPolicyOptions],
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] _requestPolicyFactories: [Array],
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] baseUri: 'https://smba.trafficmanager.net/amer/',
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] requestContentType: 'application/json; charset=utf-8',
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] credentials: [MicrosoftAppCredentials],
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] attachments: [Attachments],
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] conversations: [Conversations] },
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] Symbol(OAuthScope) => 'https://api.botframework.com',
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] 'botCallbackHandler' => [AsyncFunction],
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] 'turn.locale' => 'en-US',
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] Symbol(state) => { state: [Object], hash: '{}' },
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] 'currentUser' => { firstName: 'SENSITIVE',
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] lastName: 'SENSITIVE',
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] fullName: 'SENSITIVE',
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] countryCode: 'SENSITIVE',
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] phone: null,
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] userId: 'SENSITIVE',
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] userPrincipalName: 'SENSITIVE',
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] timeZone: 'Central Standard Time',
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] email: 'SENSITIVE',
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] campusEntity: null,
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] buildingEntity: null,
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] floorEntity: '',
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] roomEntityList: '' },
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] Symbol(state) => { state: [Object],
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] hash:
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] '{"ginaCore":{"dialogStack":[{"id":"MainDialog","state":{"dialogs":{"dialogStack":[]}},"version":"1449152352"}]},"SkillContext":{"contextStorage":{"nlpResult":null,"variables":null,"currentUser":null,"skillInstanceId":"t1gfEQYHqhyNznqxXoEF59"}}}' },
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] 'DialogStateManagerConfiguration' => { pathResolvers: [Array], memoryScopes: [Array] },
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] Symbol(turn) => { activity: [Object] },
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] 'DIALOG_CONTEXT_KEY' => DialogContext {
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] services: TurnContextStateCollection [Map] {},
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] dialogs: [DialogSet],
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] context: [Circular],
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] stack: [Array],
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] state: [DialogStateManager] } },
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] _onSendActivities: [ [Function], [Function], [AsyncFunction], [AsyncFunction] ],
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] _onUpdateActivity: [ [Function], [Function] ],
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] _onDeleteActivity: [ [Function], [Function] ],
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] _turnLocale: 'turn.locale',
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] bufferedReplyActivities: [],
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] _adapter:
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] DefaultAdapter {
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] middleware: MiddlewareSet { middleware: [Array] },
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] BotIdentityKey: Symbol(BotIdentity),
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] OAuthScopeKey: Symbol(OAuthScope),
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] ConnectorClientKey: Symbol(ConnectorClient),
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] TokenApiClientCredentialsKey: Symbol(TokenApiClientCredentials),
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] settings:
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] { appId: 'SENSITIVE',
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] appPassword: 'SENSITIVE',
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] channelService: undefined,
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] openIdMetadata: undefined },
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] credentials:
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] MicrosoftAppCredentials {
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] refreshingToken: null,
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] appId: 'SENSITIVE',
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] _tenant: 'botframework.com',
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] _oAuthEndpoint: 'https://login.microsoftonline.com/botframework.com',
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] authenticationContext: [AuthenticationContext],
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] _oAuthScope: 'https://api.botframework.com',
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] tokenCacheKey:
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] 'SENSITIVE',
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] appPassword: 'SENSITIVE' },
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] credentialsProvider:
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] SimpleCredentialProvider {
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] appId: 'SENSITIVE',
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] appPassword: 'SENSITIVE' },
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] isEmulatingOAuthCards: false,
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] authConfiguration:
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] AuthenticationConfiguration { requiredEndorsements: [], validateClaims: undefined },
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] skills: [],
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] turnError: [AsyncFunction],
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] conversationState:
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] ConversationState {
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] storage: [CosmosDbStorage],
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] storageKey: [Function],
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] stateKey: Symbol(state),
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] namespace: '' },
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] userState:
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] UserState {
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] storage: [CosmosDbStorage],
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] storageKey: [Function],
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] stateKey: Symbol(state),
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] namespace: '' } },
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] _activity:
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] { text: 'solution change ep',
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] textFormat: 'plain',
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] type: 'message',
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] timestamp: 2021-01-14T22:07:12.332Z,
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] localTimestamp: 2021-01-14T22:07:12.332Z,
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] id: '1610662032312',
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] channelId: 'msteams',
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] serviceUrl: 'https://smba.trafficmanager.net/amer/',
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] from:
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] { id:
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] '29:1klc8JsWG7BXnlOH8-_EdCKUXyHUxeu3Q7IeTgW6ydqgKTPNdu7KgbMynrImY3_goLChrawul2_2Awoo9WHlYWA',
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] name: 'SENSITIVE',
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] aadObjectId: 'e11062fc-557e-4d80-b248-a5a1aec2729d',
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] role: 'user' },
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] conversation:
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] { conversationType: 'personal',
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] tenantId: 'SENSITIVE',
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] id:
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] 'a:1oYrLPVXMKD6hOL-Z-Oyaru4ysB2OmPo89vcdYPs5j1qtHXrF3MIApq5LYkWvQkK2pdVxJqeQf4ckfomlfZlJ0WA78IZ4MmtvDbO7xDIlg4JbAX3tEm4DUc1wbppzVFGm' },
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] recipient:
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] { id: 'SENSITIVE', name: 'SENSITIVE' },
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] entities: [ [Object] ],
+2021-01-14T16:07:13.309-06:00 [APP/PROC/WEB/1] [OUT] channelData: { tenant: [Object] },
+2021-01-14T16:07:13.310-06:00 [APP/PROC/WEB/1] [OUT] locale: 'en-US',
+2021-01-14T16:07:13.310-06:00 [APP/PROC/WEB/1] [OUT] localTimezone: 'America/Chicago',
+2021-01-14T16:07:13.310-06:00 [APP/PROC/WEB/1] [OUT] rawTimestamp: '2021-01-14T22:07:12.3321635Z',
+2021-01-14T16:07:13.310-06:00 [APP/PROC/WEB/1] [OUT] rawLocalTimestamp: '2021-01-14T16:07:12.3321635-06:00',
+2021-01-14T16:07:13.311-06:00 [APP/PROC/WEB/1] [OUT] callerId: 'urn:botframework:azure' } }
+2021-01-14T16:07:13.311-06:00 [APP/PROC/WEB/1] [OUT] Continue active dialog: MainDialog
+
+
+2021-01-14T16:07:13.311-06:00 [APP/PROC/WEB/1] [OUT] Error in dialog turn {"name":"DialogContextError","dialogContext":{"activeDialog":"MainDialog","stack":[{"id":"MainDialog","state":{"dialogs":{"dialogStack":[]}},"version":"-1393917482"}]}}
