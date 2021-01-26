@@ -35,7 +35,7 @@ class MainDialog extends botbuilder_solutions_1.RouterDialog {
         this.skillInstanceId = "";
     }
     async route(dc) {
-        var _a, _b, _c, _d;
+        var _a, _b, _c, _d, _e;
         // logs needed for testing
         console.log(`MainDialog route: Dialog Context: ${util_1.inspect(dc)}`);
         // Check dispatch result
@@ -54,14 +54,26 @@ class MainDialog extends botbuilder_solutions_1.RouterDialog {
             skillContext.setObj("nlpResult", responseObj);
             skillContext.setObj("currentUser", dc.context.turnState.get("currentUser").userId);
             await this.skillContextAccessor.set(dc.context, skillContext);
-            const result = await dc.beginDialog(identifiedSkill.id);
+            let result = await dc.beginDialog(identifiedSkill.id);
             console.log("MainDialog.route, beginDialog(skillID) result: ", result);
+            // once the child dialog of MainDialog ends, it's possible that other dialogs are on stack and
+            // the returned status from continueDialog or beginDialog might be DialogTurnStatus.waiting; in
+            // this case, we need to return "completed" if dialogId is not on the stack anymore
+            if (result.status === botbuilder_dialogs_1.DialogTurnStatus.waiting && ((_b = dc === null || dc === void 0 ? void 0 : dc.activeDialog) === null || _b === void 0 ? void 0 : _b.id) !== identifiedSkill.id) {
+                let dialogIdOnStack = dc.stack.find((dialogInstance) => {
+                    return dialogInstance.id === identifiedSkill.id;
+                });
+                if (dialogIdOnStack) {
+                    // No dialogId found on stack, need to return "completed"
+                    result = { status: botbuilder_dialogs_1.DialogTurnStatus.complete, result: result.result };
+                }
+            }
             if (result.status === botbuilder_dialogs_1.DialogTurnStatus.complete) {
                 await this.complete(dc);
             }
         }
         else {
-            let normalizedEntities = (_d = (_c = (_b = responseObj === null || responseObj === void 0 ? void 0 : responseObj.metadata) === null || _b === void 0 ? void 0 : _b.luisResponse) === null || _c === void 0 ? void 0 : _c.entities) === null || _d === void 0 ? void 0 : _d.map((entry) => { var _a, _b; return (_b = (_a = entry === null || entry === void 0 ? void 0 : entry.resolution) === null || _a === void 0 ? void 0 : _a.values) === null || _b === void 0 ? void 0 : _b[0]; });
+            let normalizedEntities = (_e = (_d = (_c = responseObj === null || responseObj === void 0 ? void 0 : responseObj.metadata) === null || _c === void 0 ? void 0 : _c.luisResponse) === null || _d === void 0 ? void 0 : _d.entities) === null || _e === void 0 ? void 0 : _e.map((entry) => { var _a, _b; return (_b = (_a = entry === null || entry === void 0 ? void 0 : entry.resolution) === null || _a === void 0 ? void 0 : _a.values) === null || _b === void 0 ? void 0 : _b[0]; });
             let controlType = normalizedEntities === null || normalizedEntities === void 0 ? void 0 : normalizedEntities.find(entry => entry === constants_1.ControlSkillEnum.STOP);
             if (intent === constants_1.ControlSkillEnum.INTENT && controlType) {
                 await dc.context.sendActivity("Okay, your request has been cancelled. Let me know if you need anything else." /* Cancel_text */);
@@ -175,7 +187,7 @@ class MainDialog extends botbuilder_solutions_1.RouterDialog {
         await this.skillContextAccessor.set(dc.context, skillContext);
     }
     async onInterruptDialog(dc) {
-        var _a, _b, _c, _d, _e, _f, _g;
+        var _a, _b, _c, _d, _e, _f, _g, _h;
         // logs needed for testing
         console.log(`MainDialog onInterruptDialog: Dialog context: ${util_1.inspect(dc)}`);
         // Check dispatch result
@@ -229,7 +241,19 @@ class MainDialog extends botbuilder_solutions_1.RouterDialog {
                 dc.context.turnState.set("v4Skill", identifiedSkill.id);
                 await this.analyticsSvc.saveUserInput(new analyticsService_1.UserInputMsg(dc.context));
                 await this.analyticsSvc.saveNlpData(new analyticsService_1.NlpDataMsg(dc.context, responseObj, new Date()));
-                const result = await this.runDialog(dc, identifiedSkill.id);
+                let result = await this.runDialog(dc, identifiedSkill.id);
+                // once the child dialog of MainDialog ends, it's possible that other dialogs are on stack and
+                // the returned status from continueDialog or beginDialog might be DialogTurnStatus.waiting; in
+                // this case, we need to return "completed" if dialogId is not on the stack anymore
+                if (result.status === botbuilder_dialogs_1.DialogTurnStatus.waiting && ((_h = dc === null || dc === void 0 ? void 0 : dc.activeDialog) === null || _h === void 0 ? void 0 : _h.id) !== (identifiedSkill === null || identifiedSkill === void 0 ? void 0 : identifiedSkill.id)) {
+                    let dialogIdOnStack = dc.stack.find((dialogInstance) => {
+                        return dialogInstance.id === (identifiedSkill === null || identifiedSkill === void 0 ? void 0 : identifiedSkill.id);
+                    });
+                    if (dialogIdOnStack) {
+                        // No dialogId found on stack, need to return "completed"
+                        result = { status: botbuilder_dialogs_1.DialogTurnStatus.complete, result: result.result };
+                    }
+                }
                 if (result.status === botbuilder_dialogs_1.DialogTurnStatus.complete) {
                     await this.complete(dc);
                 }

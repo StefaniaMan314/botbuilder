@@ -82,8 +82,22 @@ export class MainDialog extends RouterDialog {
 			skillContext.setObj("currentUser", <IOnboardingState>dc.context.turnState.get("currentUser").userId);
 			await this.skillContextAccessor.set(dc.context, skillContext);
 
-			const result: DialogTurnResult = await dc.beginDialog(identifiedSkill.id);
+			let result: DialogTurnResult = await dc.beginDialog(identifiedSkill.id);
 			console.log("MainDialog.route, beginDialog(skillID) result: ", result);
+
+			// once the child dialog of MainDialog ends, it's possible that other dialogs are on stack and
+			// the returned status from continueDialog or beginDialog might be DialogTurnStatus.waiting; in
+			// this case, we need to return "completed" if dialogId is not on the stack anymore
+			if (result.status === DialogTurnStatus.waiting && dc?.activeDialog?.id !== identifiedSkill.id) {
+				let dialogIdOnStack: DialogInstance | undefined = dc.stack.find((dialogInstance: DialogInstance) => {
+					return dialogInstance.id === identifiedSkill.id;
+				});
+
+				if (dialogIdOnStack) {
+					// No dialogId found on stack, need to return "completed"
+					result = { status: DialogTurnStatus.complete, result: result.result };
+				}
+			}
 
 			if (result.status === DialogTurnStatus.complete) {
 				await this.complete(dc);
@@ -300,7 +314,21 @@ export class MainDialog extends RouterDialog {
 				await this.analyticsSvc.saveUserInput(new UserInputMsg(dc.context));
 				await this.analyticsSvc.saveNlpData(new NlpDataMsg(dc.context, responseObj, new Date()));
 
-				const result: DialogTurnResult = await this.runDialog(dc, identifiedSkill.id);
+				let result: DialogTurnResult = await this.runDialog(dc, identifiedSkill.id);
+
+				// once the child dialog of MainDialog ends, it's possible that other dialogs are on stack and
+				// the returned status from continueDialog or beginDialog might be DialogTurnStatus.waiting; in
+				// this case, we need to return "completed" if dialogId is not on the stack anymore
+				if (result.status === DialogTurnStatus.waiting && dc?.activeDialog?.id !== identifiedSkill?.id) {
+					let dialogIdOnStack: DialogInstance | undefined = dc.stack.find((dialogInstance: DialogInstance) => {
+						return dialogInstance.id === identifiedSkill?.id;
+					});
+
+					if (dialogIdOnStack) {
+						// No dialogId found on stack, need to return "completed"
+						result = { status: DialogTurnStatus.complete, result: result.result };
+					}
+				}
 
 				if (result.status === DialogTurnStatus.complete) {
 					await this.complete(dc);
